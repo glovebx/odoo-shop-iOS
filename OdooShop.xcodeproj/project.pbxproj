@@ -1,0 +1,519 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5285431328942CD30013082F /* SignUpScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5285431228942CD30013082F /* SignUpScreenView.swift */; };
+		528543182894488D0013082F /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528543172894488D0013082F /* Version.swift */; };
+		5285431B28952B9D0013082F /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5285431A28952B9D0013082F /* Store.swift */; };
+		5285431E28952D0A0013082F /* odoo_db.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5285431C28952D0A0013082F /* odoo_db.xcdatamodeld */; };
+		52854321289533C30013082F /* CancelBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52854320289533C30013082F /* CancelBag.swift */; };
+		528543232895340A0013082F /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528543222895340A0013082F /* Loadable.swift */; };
+		52854325289534500013082F /* NetworkingHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52854324289534500013082F /* NetworkingHelpers.swift */; };
+		52854327289534660013082F /* APICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52854326289534660013082F /* APICall.swift */; };
+		528543292895347D0013082F /* WebRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528543282895347D0013082F /* WebRepository.swift */; };
+		5285432B289534DA0013082F /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5285432A289534DA0013082F /* Helpers.swift */; };
+		52854330289537C40013082F /* AuthenticateWebRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5285432F289537C40013082F /* AuthenticateWebRepository.swift */; };
+		5285433328955A500013082F /* AuthenticateInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5285433228955A500013082F /* AuthenticateInteractor.swift */; };
+		5285433528955D1E0013082F /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5285433428955D1E0013082F /* AppState.swift */; };
+		5285433728955D360013082F /* DependencyInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5285433628955D360013082F /* DependencyInjector.swift */; };
+		5285433928955D8F0013082F /* InteractorsContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5285433828955D8F0013082F /* InteractorsContainer.swift */; };
+		5285433C289562340013082F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5285433B289562340013082F /* AppDelegate.swift */; };
+		5285433E289562570013082F /* SystemEventsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5285433D289562570013082F /* SystemEventsHandler.swift */; };
+		52854342289564440013082F /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52854341289564440013082F /* AppEnvironment.swift */; };
+		52854344289566690013082F /* RootViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52854343289566690013082F /* RootViewModifier.swift */; };
+		52E4A73128940DF200B3E28F /* OdooShopApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E4A73028940DF200B3E28F /* OdooShopApp.swift */; };
+		52E4A73328940DF200B3E28F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E4A73228940DF200B3E28F /* ContentView.swift */; };
+		52E4A73528940DF400B3E28F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52E4A73428940DF400B3E28F /* Assets.xcassets */; };
+		52E4A73828940DF400B3E28F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52E4A73728940DF400B3E28F /* Preview Assets.xcassets */; };
+		52E4A74828940FDC00B3E28F /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 52E4A74728940FDB00B3E28F /* Fonts */; };
+		52E4A74D28941E2D00B3E28F /* WelcomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E4A74C28941E2D00B3E28F /* WelcomeScreenView.swift */; };
+		52E4A74F28941EA100B3E28F /* SignInScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E4A74E28941EA100B3E28F /* SignInScreenView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5285431228942CD30013082F /* SignUpScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpScreenView.swift; sourceTree = "<group>"; };
+		528543172894488D0013082F /* Version.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Version.swift; sourceTree = "<group>"; };
+		5285431A28952B9D0013082F /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		5285431D28952D0A0013082F /* odoo_db.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = odoo_db.xcdatamodel; sourceTree = "<group>"; };
+		52854320289533C30013082F /* CancelBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelBag.swift; sourceTree = "<group>"; };
+		528543222895340A0013082F /* Loadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loadable.swift; sourceTree = "<group>"; };
+		52854324289534500013082F /* NetworkingHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingHelpers.swift; sourceTree = "<group>"; };
+		52854326289534660013082F /* APICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICall.swift; sourceTree = "<group>"; };
+		528543282895347D0013082F /* WebRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebRepository.swift; sourceTree = "<group>"; };
+		5285432A289534DA0013082F /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		5285432F289537C40013082F /* AuthenticateWebRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticateWebRepository.swift; sourceTree = "<group>"; };
+		5285433228955A500013082F /* AuthenticateInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticateInteractor.swift; sourceTree = "<group>"; };
+		5285433428955D1E0013082F /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		5285433628955D360013082F /* DependencyInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjector.swift; sourceTree = "<group>"; };
+		5285433828955D8F0013082F /* InteractorsContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorsContainer.swift; sourceTree = "<group>"; };
+		5285433B289562340013082F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5285433D289562570013082F /* SystemEventsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemEventsHandler.swift; sourceTree = "<group>"; };
+		52854341289564440013082F /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
+		52854343289566690013082F /* RootViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModifier.swift; sourceTree = "<group>"; };
+		52E4A72D28940DF200B3E28F /* OdooShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OdooShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		52E4A73028940DF200B3E28F /* OdooShopApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OdooShopApp.swift; sourceTree = "<group>"; };
+		52E4A73228940DF200B3E28F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		52E4A73428940DF400B3E28F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		52E4A73728940DF400B3E28F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		52E4A74728940FDB00B3E28F /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
+		52E4A74C28941E2D00B3E28F /* WelcomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreenView.swift; sourceTree = "<group>"; };
+		52E4A74E28941EA100B3E28F /* SignInScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInScreenView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		52E4A72A28940DF200B3E28F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		52854316289448430013082F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				528543172894488D0013082F /* Version.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5285431928952B610013082F /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				5285431A28952B9D0013082F /* Store.swift */,
+				52854320289533C30013082F /* CancelBag.swift */,
+				528543222895340A0013082F /* Loadable.swift */,
+				52854326289534660013082F /* APICall.swift */,
+				528543282895347D0013082F /* WebRepository.swift */,
+				52854324289534500013082F /* NetworkingHelpers.swift */,
+				5285432A289534DA0013082F /* Helpers.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		5285431F28952D690013082F /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				5285431C28952D0A0013082F /* odoo_db.xcdatamodeld */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		5285432C289537320013082F /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				52854343289566690013082F /* RootViewModifier.swift */,
+				52E4A73228940DF200B3E28F /* ContentView.swift */,
+				52E4A7492894100300B3E28F /* Screens */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		5285432D2895374A0013082F /* Injected */ = {
+			isa = PBXGroup;
+			children = (
+				5285433428955D1E0013082F /* AppState.swift */,
+				5285433828955D8F0013082F /* InteractorsContainer.swift */,
+				5285433628955D360013082F /* DependencyInjector.swift */,
+			);
+			path = Injected;
+			sourceTree = "<group>";
+		};
+		5285432E2895378E0013082F /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				5285432F289537C40013082F /* AuthenticateWebRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		52854331289559DC0013082F /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				5285433228955A500013082F /* AuthenticateInteractor.swift */,
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		5285433A289561DF0013082F /* System */ = {
+			isa = PBXGroup;
+			children = (
+				5285433B289562340013082F /* AppDelegate.swift */,
+				52854341289564440013082F /* AppEnvironment.swift */,
+				5285433D289562570013082F /* SystemEventsHandler.swift */,
+				52E4A73028940DF200B3E28F /* OdooShopApp.swift */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
+		52E4A72428940DF200B3E28F = {
+			isa = PBXGroup;
+			children = (
+				52E4A72F28940DF200B3E28F /* OdooShop */,
+				52E4A72E28940DF200B3E28F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		52E4A72E28940DF200B3E28F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				52E4A72D28940DF200B3E28F /* OdooShop.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		52E4A72F28940DF200B3E28F /* OdooShop */ = {
+			isa = PBXGroup;
+			children = (
+				5285431F28952D690013082F /* Persistence */,
+				5285432D2895374A0013082F /* Injected */,
+				52854316289448430013082F /* Models */,
+				5285432E2895378E0013082F /* Repositories */,
+				52854331289559DC0013082F /* Interactors */,
+				5285432C289537320013082F /* UI */,
+				52E4A74728940FDB00B3E28F /* Fonts */,
+				5285433A289561DF0013082F /* System */,
+				5285431928952B610013082F /* Utilities */,
+				52E4A73428940DF400B3E28F /* Assets.xcassets */,
+				52E4A73628940DF400B3E28F /* Preview Content */,
+			);
+			path = OdooShop;
+			sourceTree = "<group>";
+		};
+		52E4A73628940DF400B3E28F /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				52E4A73728940DF400B3E28F /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		52E4A7492894100300B3E28F /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				52E4A74C28941E2D00B3E28F /* WelcomeScreenView.swift */,
+				52E4A74E28941EA100B3E28F /* SignInScreenView.swift */,
+				5285431228942CD30013082F /* SignUpScreenView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		52E4A72C28940DF200B3E28F /* OdooShop */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52E4A73B28940DF400B3E28F /* Build configuration list for PBXNativeTarget "OdooShop" */;
+			buildPhases = (
+				52E4A72928940DF200B3E28F /* Sources */,
+				52E4A72A28940DF200B3E28F /* Frameworks */,
+				52E4A72B28940DF200B3E28F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OdooShop;
+			productName = OdooShop;
+			productReference = 52E4A72D28940DF200B3E28F /* OdooShop.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		52E4A72528940DF200B3E28F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					52E4A72C28940DF200B3E28F = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 52E4A72828940DF200B3E28F /* Build configuration list for PBXProject "OdooShop" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 52E4A72428940DF200B3E28F;
+			productRefGroup = 52E4A72E28940DF200B3E28F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				52E4A72C28940DF200B3E28F /* OdooShop */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		52E4A72B28940DF200B3E28F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52E4A74828940FDC00B3E28F /* Fonts in Resources */,
+				52E4A73828940DF400B3E28F /* Preview Assets.xcassets in Resources */,
+				52E4A73528940DF400B3E28F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		52E4A72928940DF200B3E28F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52E4A74F28941EA100B3E28F /* SignInScreenView.swift in Sources */,
+				5285431E28952D0A0013082F /* odoo_db.xcdatamodeld in Sources */,
+				52E4A74D28941E2D00B3E28F /* WelcomeScreenView.swift in Sources */,
+				5285433528955D1E0013082F /* AppState.swift in Sources */,
+				52854344289566690013082F /* RootViewModifier.swift in Sources */,
+				52854342289564440013082F /* AppEnvironment.swift in Sources */,
+				5285431B28952B9D0013082F /* Store.swift in Sources */,
+				5285433928955D8F0013082F /* InteractorsContainer.swift in Sources */,
+				52854325289534500013082F /* NetworkingHelpers.swift in Sources */,
+				52854330289537C40013082F /* AuthenticateWebRepository.swift in Sources */,
+				528543292895347D0013082F /* WebRepository.swift in Sources */,
+				5285433E289562570013082F /* SystemEventsHandler.swift in Sources */,
+				52E4A73328940DF200B3E28F /* ContentView.swift in Sources */,
+				52854321289533C30013082F /* CancelBag.swift in Sources */,
+				528543182894488D0013082F /* Version.swift in Sources */,
+				528543232895340A0013082F /* Loadable.swift in Sources */,
+				5285431328942CD30013082F /* SignUpScreenView.swift in Sources */,
+				5285433328955A500013082F /* AuthenticateInteractor.swift in Sources */,
+				5285433728955D360013082F /* DependencyInjector.swift in Sources */,
+				52E4A73128940DF200B3E28F /* OdooShopApp.swift in Sources */,
+				5285433C289562340013082F /* AppDelegate.swift in Sources */,
+				5285432B289534DA0013082F /* Helpers.swift in Sources */,
+				52854327289534660013082F /* APICall.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		52E4A73928940DF400B3E28F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		52E4A73A28940DF400B3E28F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		52E4A73C28940DF400B3E28F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"OdooShop/Preview Content\"";
+				DEVELOPMENT_TEAM = GN24WVN7VV;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.moco.OdooShop;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		52E4A73D28940DF400B3E28F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"OdooShop/Preview Content\"";
+				DEVELOPMENT_TEAM = GN24WVN7VV;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.moco.OdooShop;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		52E4A72828940DF200B3E28F /* Build configuration list for PBXProject "OdooShop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52E4A73928940DF400B3E28F /* Debug */,
+				52E4A73A28940DF400B3E28F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52E4A73B28940DF400B3E28F /* Build configuration list for PBXNativeTarget "OdooShop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52E4A73C28940DF400B3E28F /* Debug */,
+				52E4A73D28940DF400B3E28F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5285431C28952D0A0013082F /* odoo_db.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5285431D28952D0A0013082F /* odoo_db.xcdatamodel */,
+			);
+			currentVersion = 5285431D28952D0A0013082F /* odoo_db.xcdatamodel */;
+			path = odoo_db.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 52E4A72528940DF200B3E28F /* Project object */;
+}
