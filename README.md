@@ -1,2 +1,2 @@
 # odoo-client-iOS
-odoo client app for iOS/iPad/macOS
+odoo shop client app for iOS/iPad/macOS
