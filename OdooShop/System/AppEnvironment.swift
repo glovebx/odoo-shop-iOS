@@ -45,19 +45,18 @@ extension AppEnvironment {
     
     private static func configuredURLSession() -> URLSession {
         let configuration = URLSessionConfiguration.default
-        configuration.timeoutIntervalForRequest = 60
-        configuration.timeoutIntervalForResource = 120
+        configuration.timeoutIntervalForRequest = 30
+        configuration.timeoutIntervalForResource = 40
         configuration.waitsForConnectivity = true
         configuration.httpMaximumConnectionsPerHost = 5
-        configuration.requestCachePolicy = .returnCacheDataElseLoad
+        configuration.requestCachePolicy = .reloadIgnoringLocalCacheData
         configuration.urlCache = .shared
         return URLSession(configuration: configuration)
     }
     
     private static func configuredWebRepositories(session: URLSession) -> DIContainer.WebRepositories {
         let authenticateWebRepository = AuthenticateWebRepository(
-            session: session,
-            baseURL: "http://127.0.0.1:8069")
+            session: session)
         return .init(authenticateWebRepository: authenticateWebRepository)
     }
     

@@ -26,6 +26,10 @@
 		5285433E289562570013082F /* SystemEventsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5285433D289562570013082F /* SystemEventsHandler.swift */; };
 		52854342289564440013082F /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52854341289564440013082F /* AppEnvironment.swift */; };
 		52854344289566690013082F /* RootViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52854343289566690013082F /* RootViewModifier.swift */; };
+		528543462896CB650013082F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528543452896CB650013082F /* User.swift */; };
+		528543482896CBD30013082F /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528543472896CBD30013082F /* Login.swift */; };
+		5285434A2897AE4A0013082F /* Db.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528543492897AE4A0013082F /* Db.swift */; };
+		5285434C2897C6E00013082F /* ServerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5285434B2897C6E00013082F /* ServerError.swift */; };
 		52E4A73128940DF200B3E28F /* OdooShopApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E4A73028940DF200B3E28F /* OdooShopApp.swift */; };
 		52E4A73328940DF200B3E28F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E4A73228940DF200B3E28F /* ContentView.swift */; };
 		52E4A73528940DF400B3E28F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52E4A73428940DF400B3E28F /* Assets.xcassets */; };
@@ -55,6 +59,10 @@
 		5285433D289562570013082F /* SystemEventsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemEventsHandler.swift; sourceTree = "<group>"; };
 		52854341289564440013082F /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
 		52854343289566690013082F /* RootViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModifier.swift; sourceTree = "<group>"; };
+		528543452896CB650013082F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		528543472896CBD30013082F /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		528543492897AE4A0013082F /* Db.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Db.swift; sourceTree = "<group>"; };
+		5285434B2897C6E00013082F /* ServerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerError.swift; sourceTree = "<group>"; };
 		52E4A72D28940DF200B3E28F /* OdooShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OdooShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52E4A73028940DF200B3E28F /* OdooShopApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OdooShopApp.swift; sourceTree = "<group>"; };
 		52E4A73228940DF200B3E28F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -80,6 +88,10 @@
 			isa = PBXGroup;
 			children = (
 				528543172894488D0013082F /* Version.swift */,
+				528543452896CB650013082F /* User.swift */,
+				528543472896CBD30013082F /* Login.swift */,
+				528543492897AE4A0013082F /* Db.swift */,
+				5285434B2897C6E00013082F /* ServerError.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -292,11 +304,15 @@
 				52854321289533C30013082F /* CancelBag.swift in Sources */,
 				528543182894488D0013082F /* Version.swift in Sources */,
 				528543232895340A0013082F /* Loadable.swift in Sources */,
+				5285434C2897C6E00013082F /* ServerError.swift in Sources */,
 				5285431328942CD30013082F /* SignUpScreenView.swift in Sources */,
 				5285433328955A500013082F /* AuthenticateInteractor.swift in Sources */,
 				5285433728955D360013082F /* DependencyInjector.swift in Sources */,
 				52E4A73128940DF200B3E28F /* OdooShopApp.swift in Sources */,
+				528543462896CB650013082F /* User.swift in Sources */,
+				528543482896CBD30013082F /* Login.swift in Sources */,
 				5285433C289562340013082F /* AppDelegate.swift in Sources */,
+				5285434A2897AE4A0013082F /* Db.swift in Sources */,
 				5285432B289534DA0013082F /* Helpers.swift in Sources */,
 				52854327289534660013082F /* APICall.swift in Sources */,
 			);

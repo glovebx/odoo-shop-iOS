@@ -10,10 +10,17 @@ import SwiftUI
 import Combine
 
 struct AppState: Equatable {
+    var userContext = UserContext()
     var userData = UserData()
     var routing = ViewRouting()
     var system = System()
 //    var permissions = Permissions()
+}
+
+extension AppState {
+    struct UserContext: Equatable {
+        var serverVersion: String = ""
+    }
 }
 
 extension AppState {
@@ -24,6 +31,8 @@ extension AppState {
          which made the resulting variable used locally by just one screen (CountriesList)
          Otherwise, the list of countries could have remained here, available for the entire app.
          */
+        var user: User = .init()
+//        var sessionId: String = ""
     }
 }
 

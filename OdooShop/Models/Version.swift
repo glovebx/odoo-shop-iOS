@@ -32,6 +32,6 @@ struct ServerVersion: Decodable, Equatable {
     }
 }
 
-struct ServerVersionData: Decodable {
+struct ServerVersionResult: Decodable, Equatable {
     let result: ServerVersion
 }

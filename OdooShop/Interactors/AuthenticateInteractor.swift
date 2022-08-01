@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 protocol AuthenticateInteractorProtocol {
-    func loadServerVersion(versionInfo: LoadableSubject<ServerVersionData>)
+    func authenticate(login: Login, userResult: LoadableSubject<UserResult>)
 }
 
 struct AuthenticateInteractor: AuthenticateInteractorProtocol {
@@ -21,22 +21,35 @@ struct AuthenticateInteractor: AuthenticateInteractorProtocol {
         self.appState = appState
     }
     
-    func loadServerVersion(versionInfo: LoadableSubject<ServerVersionData>) {
+    func authenticate(login: Login, userResult: LoadableSubject<UserResult>) {
         let cancelBag = CancelBag()
-        versionInfo.wrappedValue.setIsLoading(cancelBag: cancelBag)
+        userResult.wrappedValue.setIsLoading(cancelBag: cancelBag)
         
-        return webRepository
-            .loadServerVersion()
-            .sinkToLoadable {
-                versionInfo.wrappedValue = $0
+        weak var weakAppState = appState
+        webRepository
+            .loadServerVersion(login: login)
+            .flatMap{ _ -> AnyPublisher<DbResult, Error> in
+                return webRepository.listDatabase(login: login)
             }
-        // 保存到数据库
+            .flatMap{ dbResult -> AnyPublisher<UserResult, Error> in
+                let login: Login = .init(serverUrl: login.serverUrl,
+                                         database: dbResult.result.first ?? "",
+                                         username: login.username,
+                                         password: login.password)
+                return webRepository.authenticate(login: login)
+            }
+            .sinkToLoadable {
+                dump($0)
+                userResult.wrappedValue = $0
+                weakAppState?[\.userData.user] = $0.value?.result ?? .init()
+            }
+        // TODO: 保存到数据库
             .store(in: cancelBag)
     }
 }
 
 struct StubAuthenticateInteractor: AuthenticateInteractorProtocol {
     
-    func loadServerVersion(versionInfo: LoadableSubject<ServerVersionData>) {
+    func authenticate(login: Login, userResult: LoadableSubject<UserResult>) {
     }
 }
