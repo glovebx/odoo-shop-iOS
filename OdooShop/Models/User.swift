@@ -13,7 +13,7 @@ struct User: Decodable, Equatable {
     let uid: Int
     let username: String
     let name: String
-//    let sessionId: String
+    var sessionId: String = ""
     
     enum CodingKeys: String, CodingKey {
 //        case serverUrl

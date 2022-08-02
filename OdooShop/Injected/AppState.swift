@@ -25,12 +25,6 @@ extension AppState {
 
 extension AppState {
     struct UserData: Equatable {
-        /*
-         The list of countries (Loadable<[Country]>) used to be stored here.
-         It was removed for performing countries' search by name inside a database,
-         which made the resulting variable used locally by just one screen (CountriesList)
-         Otherwise, the list of countries could have remained here, available for the entire app.
-         */
         var user: User = .init()
 //        var sessionId: String = ""
     }

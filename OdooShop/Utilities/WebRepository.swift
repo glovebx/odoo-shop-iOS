@@ -16,12 +16,29 @@ protocol WebRepositoryProtocol {
 }
 
 extension WebRepositoryProtocol {
-    func call<Value>(endpoint: APICall, httpCodes: HTTPCodes = .success) -> AnyPublisher<Value, Error>
+    // TODO: cookieHandler refactor
+    func call<Value>(endpoint: APICall, httpCodes: HTTPCodes = .success,
+                     cookieHandler: @escaping (String) -> Void = {_ in }) -> AnyPublisher<Value, Error>
         where Value: Decodable {
         do {
             let request = try endpoint.urlRequest()
             return session
                 .dataTaskPublisher(for: request)
+                .map{
+                    dump($0)
+                    
+                    if endpoint.path == "/web/session/authenticate" {
+                        if let response = $0.1 as? HTTPURLResponse,
+                           let fields = response.allHeaderFields as? [String: String] {
+                            // Get cookie with key "Set-Cookie"
+                            if let cookie = fields["Set-Cookie"]?.split(separator: ";")
+                                .first(where: { $0.contains("session_id")})?.split(separator: "=").last {
+                                cookieHandler(String(cookie))
+                            }
+                        }
+                    }
+                    return $0
+                }
                 .requestJSON(httpCodes: httpCodes)
         } catch let error {
             return Fail<Value, Error>(error: error).eraseToAnyPublisher()
@@ -34,7 +51,6 @@ extension WebRepositoryProtocol {
 extension Publisher where Output == URLSession.DataTaskPublisher.Output {
     func requestData(httpCodes: HTTPCodes = .success) -> AnyPublisher<Data, Error> {
         return tryMap {
-            dump($0)
                 assert(!Thread.isMainThread)
                 guard let code = ($0.1 as? HTTPURLResponse)?.statusCode else {
                     throw APIError.unexpectedResponse

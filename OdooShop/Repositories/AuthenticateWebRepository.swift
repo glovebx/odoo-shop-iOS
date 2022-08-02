@@ -12,7 +12,7 @@ import SwiftUI
 protocol AuthenticateWebRepositoryProtocol: WebRepositoryProtocol {
     func loadServerVersion(login: Login) -> AnyPublisher<ServerVersionResult, Error>
     func listDatabase(login: Login) -> AnyPublisher<DbResult, Error>
-    func authenticate(login: Login) -> AnyPublisher<UserResult, Error>
+    func authenticate(login: Login, cookieHandler: @escaping (String) -> Void) -> AnyPublisher<UserResult, Error>
 }
 
 struct AuthenticateWebRepository: AuthenticateWebRepositoryProtocol {
@@ -32,8 +32,8 @@ struct AuthenticateWebRepository: AuthenticateWebRepositoryProtocol {
     }
     
     // Mark - login
-    func authenticate(login: Login) -> AnyPublisher<UserResult, Error> {
-        return call(endpoint: API.authenticate(login))
+    func authenticate(login: Login, cookieHandler: @escaping (String) -> Void) -> AnyPublisher<UserResult, Error> {
+        return call(endpoint: API.authenticate(login), cookieHandler: cookieHandler)
     }
 }
 

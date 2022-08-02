@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct SignUpScreenView: View {
+    @Environment(\.injected) private var injected: DIContainer
+    
     var body: some View {
-        Text("Hello, Under Construction!")
+        Text("Hello \(injected.appState[\.userData.user].name), Under Construction!")
     }
 }
 

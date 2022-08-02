@@ -25,6 +25,7 @@ struct AuthenticateInteractor: AuthenticateInteractorProtocol {
         let cancelBag = CancelBag()
         userResult.wrappedValue.setIsLoading(cancelBag: cancelBag)
         
+        var cookie: String = ""
         weak var weakAppState = appState
         webRepository
             .loadServerVersion(login: login)
@@ -36,12 +37,22 @@ struct AuthenticateInteractor: AuthenticateInteractorProtocol {
                                          database: dbResult.result.first ?? "",
                                          username: login.username,
                                          password: login.password)
-                return webRepository.authenticate(login: login)
+                return webRepository.authenticate(login: login) {
+                    cookie = $0
+                }
             }
             .sinkToLoadable {
                 dump($0)
                 userResult.wrappedValue = $0
-                weakAppState?[\.userData.user] = $0.value?.result ?? .init()
+                if var user = $0.value?.result {
+                    if user.uid > 0 {
+                        user.sessionId = cookie
+                    }
+                    
+                    weakAppState?[\.userData.user] = user
+                } else {
+                    weakAppState?[\.userData.user] = .init()
+                }                
             }
         // TODO: 保存到数据库
             .store(in: cancelBag)
