@@ -18,7 +18,7 @@ struct SignInScreenView: View {
     
     @State private var url: String = ""
     @State private var database: String = ""
-    @State private var email: String = ""
+    @State private var login: String = ""
     @State private var password: String = ""
     
     init(userResult: Loadable<UserResult> = .notRequested) {
@@ -62,7 +62,7 @@ struct SignInScreenView: View {
                         .shadow(color: Color.black.opacity(0.08), radius: 60, x: 0.0, y: 16)
                         .padding(.bottom)
                     
-                    TextField("Login", text: $email)
+                    TextField("Login", text: $login)
                         .autocapitalization(.none)
                         .font(.title3)
                         .padding()
@@ -83,12 +83,13 @@ struct SignInScreenView: View {
                         .shadow(color: Color.black.opacity(0.08), radius: 60, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: 16)
                         .padding(.bottom)
                     
-                    PrimaryButton(title: "Login")
+                    PrimaryButton(title: "Login",
+                                  enabled: !url.isEmpty && !login.isEmpty && !password.isEmpty)
                         .padding(.top, 20)
                         .onTapGesture {
                             self.authenticate(login: .init(serverUrl: url,
                                                            database: database,
-                                                           username: email,
+                                                           username: login,
                                                            password: password))
                         }
                     

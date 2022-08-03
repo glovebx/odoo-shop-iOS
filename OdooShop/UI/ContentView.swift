@@ -23,14 +23,16 @@ struct ContentView_Previews: PreviewProvider {
 
 struct PrimaryButton: View {
     var title: String
+    var enabled: Bool
     var body: some View {
         Text(title)
             .font(.title3)
             .fontWeight(.bold)
-            .foregroundColor(.white)
+            .foregroundColor(enabled ? .white : .gray)
             .frame(maxWidth: .infinity)
             .padding()
-            .background(Color("PrimaryColor"))
+            .background(enabled ? Color("PrimaryColor") : Color.white)
             .cornerRadius(50)
+            .allowsHitTesting(enabled)
     }
 }
